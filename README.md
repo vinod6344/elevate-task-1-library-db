@@ -19,4 +19,21 @@ This project contains the SQL schema for a basic Library Management System.
 
 ---
 
+---
+
+## 🧱 Entities and Relationships
+
+### 📌 Entities:
+- **Books**: BookID, Title, Author, Publisher, ISBN, Category, Quantity
+- **Members**: MemberID, Name, Email, Phone, Address, MembershipDate
+- **Staff**: StaffID, Name, Email, Role, JoinedDate
+- **Loans**: LoanID, MemberID, BookID, IssueDate, ReturnDate, Status
+
+### 🔗 Relationships:
+- A **Member** can borrow many **Books**
+- A **Book** can be borrowed by many **Members**
+- This many-to-many relationship is handled by the **Loans** table
+- **Loans** table has foreign keys to both **Books** and **Members**
+
+
 ✅ Task Completed for Elewayte Labs Internship (SQL Developer Track)
